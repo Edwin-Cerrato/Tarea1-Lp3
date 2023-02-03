@@ -24,11 +24,12 @@ namespace Tarea1
 
             //Llamado de Funcion
             ParImpar(valor);
+            Signo(valor);
         }
 
         //Funcion Impar/Par
-
         private int ParImpar(int num1)
+
         {
             if ((num1 %2)==0)
             {
@@ -41,6 +42,26 @@ namespace Tarea1
 
         }
 
+        //Funcion Negativo/Positivo
+        private int Signo(int num)
+        {
+            if (num == 0)
+            {
+                MessageBox.Show("Es un Numero NEUTRO", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            if (num>0)
+            {
+                MessageBox.Show("El numero es Positivo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("El numero es Negativo", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            return num;
+
+        }
 
     }
 }
