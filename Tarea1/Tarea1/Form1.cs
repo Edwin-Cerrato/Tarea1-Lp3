@@ -20,11 +20,25 @@ namespace Tarea1
 
         private void btnEjecutar_Click(object sender, EventArgs e)
         {
+
+            //Validación para evitar el error de un campo vacio
+
+            if (txtValor.Text == "")
+            {
+                alerta.SetError(txtValor, "Introduzca un Valor !!");
+                return;
+            }
+
+            //Limpieza de ErrorProvider
+            alerta.Clear();
+
             int valor = Convert.ToInt16(txtValor.Text);
 
-            //Llamado de Funcion
+            
+            //Llamado de Funciones
             ParImpar(valor);
             Signo(valor);
+
         }
 
         //Funcion Impar/Par
